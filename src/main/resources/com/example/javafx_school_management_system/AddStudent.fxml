@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane id="staff_border_center" prefHeight="651.0" prefWidth="1301.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_school_management_system.AddStudent">
+   <center>
+      <GridPane id="admin_pane" prefHeight="651.0" prefWidth="916.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="228.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="603.0" minHeight="10.0" prefHeight="413.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="StudentTable" editable="true" prefHeight="611.0" prefWidth="615.0" tableMenuButtonVisible="true" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="id_col" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="name_col" prefWidth="75.0" text="name" />
+                  <TableColumn fx:id="contact_col" prefWidth="97.0" text="contact" />
+                  <TableColumn fx:id="status_col" prefWidth="53.0" text="status" />
+                  <TableColumn fx:id="address_col" prefWidth="164.0" text="Address" />
+                  <TableColumn fx:id="Guardian_col" minWidth="0.0" prefWidth="53.0" text="Guardian" />
+                  <TableColumn fx:id="Date_col1" prefWidth="126.0" text="Date" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </TableView>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <HBox spacing="20.0">
+                     <children>
+                        <TextField fx:id="studentName" prefHeight="25.0" prefWidth="249.0" promptText="Name" />
+                        <TextField fx:id="studentContact" prefHeight="25.0" prefWidth="245.0" promptText="Contact" />
+                        <DatePicker fx:id="studentDate" prefHeight="25.0" prefWidth="244.0" promptText="Birth date" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <TextField fx:id="studentGuardian" prefHeight="25.0" prefWidth="240.0" promptText="Guardian" />
+                        <TextField fx:id="studentAddress" prefHeight="25.0" prefWidth="263.0" promptText="Address" />
+                        <RadioButton fx:id="rdStaffActive" mnemonicParsing="false" text="Active">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Class" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdStaffInactive" mnemonicParsing="false" text="Inactive" toggleGroup="$Class" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="30.0">
+                     <children>
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#SubmitBTN" prefHeight="40.0" prefWidth="120.0" text="Submit" />
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#btnEdit" prefHeight="40.0" prefWidth="120.0" text="Edit" />
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#btnDelete" prefHeight="40.0" prefWidth="120.0" text="Delete" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <TextField fx:id="FilterID" promptText="Filter ID" />
+                        <TextField fx:id="FilterName" promptText="Filter Name" />
+                        <TextField fx:id="FilterContact" promptText="Filter Contact" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <TextField fx:id="FilterAddress" prefHeight="25.0" prefWidth="210.0" promptText="Filter Address" />
+                        <TextField fx:id="FilterGuardian" promptText="Filter Guradian" />
+                        <ComboBox fx:id="cmbStatus" prefWidth="150.0" promptText="Filter Status" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="30.0">
+                     <children>
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#btnFilter" prefHeight="40.0" prefWidth="120.0" text="Filter" />
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#btnRefresh" prefHeight="40.0" prefWidth="120.0" text="Refresh" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <left>
+      <VBox id="staff_vbox" prefHeight="552.0" prefWidth="250.0" spacing="10.0">
+         <children>
+            <Button id="windows8" mnemonicParsing="false" onAction="#btnBack" prefHeight="81.0" prefWidth="364.0" text="Back" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

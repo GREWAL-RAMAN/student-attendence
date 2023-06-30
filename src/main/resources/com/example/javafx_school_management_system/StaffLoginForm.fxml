@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="login_pane_2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_school_management_system.StaffLogin">
+   <center>
+      <VBox id="login_pane_1" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="94.0" prefWidth="600.0" text="Staff Login form" textFill="#f2eeee">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="600.0" spacing="50.0">
+               <children>
+                  <TextField id="text_1" fx:id="staffTxtName" prefHeight="25.0" prefWidth="285.0" promptText="Username" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="45.0" prefWidth="600.0" spacing="50.0">
+               <children>
+                  <PasswordField id="text_1" fx:id="staffPassword" prefHeight="25.0" prefWidth="285.0" promptText="Password" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="233.0" prefHeight="45.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Button id="blue_1" mnemonicParsing="false" onAction="#checkLogin" prefHeight="60.0" prefWidth="120.0" text="Log in" />
+                  <Button id="blue_1" layoutX="280.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="60.0" prefWidth="120.0" text="Back" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

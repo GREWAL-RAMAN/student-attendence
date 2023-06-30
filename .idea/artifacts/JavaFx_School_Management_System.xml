@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="JavaFx_School_Management_System">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaFx_School_Management_System</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.javafx_school_management_system.HelloApplication" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Attendance" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="JavaFx_School_Management_System.jar">
+        <element id="module-output" name="JavaFx_School_Management_System" />
+      </element>
+    </root>
+  </artifact>
+</component>

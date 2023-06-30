@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="StaffBorderPane" prefHeight="430.0" prefWidth="945.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_school_management_system.StaffDashboard">
+   <left>
+      <VBox id="staff_vbox_1" prefWidth="250.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_text" alignment="CENTER" prefHeight="56.0" prefWidth="272.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button id="windows8" layoutX="10.0" layoutY="91.0" mnemonicParsing="false" onAction="#btnHome" prefHeight="60.0" prefWidth="280.0" text="Home" />
+            <Button id="windows8" mnemonicParsing="false" onAction="#btnAccount" prefHeight="60.0" prefWidth="280.0" text="Account" />
+            <Button id="windows8" mnemonicParsing="false" onAction="#btnLogOut" prefHeight="60.0" prefWidth="280.0" text="Logout" />
+            <Button id="windows8" mnemonicParsing="false" onAction="#btnAttendance" prefHeight="60.0" prefWidth="280.0" text="attendence" />
+            <Button id="windows8" mnemonicParsing="false" onAction="#btnCheckAttendance" prefHeight="60.0" prefWidth="280.0" text="check" />
+            <Button id="windows8" layoutX="10.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnSelfLeave" prefHeight="60.0" prefWidth="280.0" text="Self Leave" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane id="staff_border_center" fx:id="StaffAnchorPane" prefHeight="430.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="staff_pane" alignment="CENTER" layoutX="30.0" layoutY="50.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox prefHeight="280.0" prefWidth="158.0" spacing="20.0">
+                     <children>
+                        <Button id="blue_1" mnemonicParsing="false" onAction="#onClickRefresh" prefHeight="41.0" prefWidth="205.0" text="Refresh" />
+                        <Button id="blue_1" fx:id="btnEdit" mnemonicParsing="false" onAction="#onClickEdit" prefHeight="41.0" prefWidth="196.0" text="Edit">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Button>
+                        <Button id="blue_1" fx:id="btnSet" mnemonicParsing="false" onAction="#onClickSet" prefHeight="41.0" prefWidth="195.0" text="Set">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Button>
+                        <DatePicker fx:id="dateStart">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></DatePicker>
+                        <DatePicker fx:id="dateEnd" layoutX="10.0" layoutY="115.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></DatePicker>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <PieChart fx:id="PieChartStaff" title="Present--Absent--Chart" />
+               </children>
+               <padding>
+                  <Insets bottom="80.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></AnchorPane>
+   </center>
+</BorderPane>
